@@ -1,29 +1,32 @@
-# vue-project
+# Vue Academy Reference Application
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue Reference Application, a project from <a href="https://vue.ac" target="_blank">Vue Academy</a>.
 
-## Recommended IDE Setup
+[![Vue Academy](https://www.vueacademy.ca/images/classroom.jpeg "Vue Academy")](https://www.vueacademy.ca)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Vue Academy is a world-class hands-on instructor-led Vue training provider.
 
-## Customize configuration
+Visit www.vueacademy.ca for our list of Vue related courses:
+* Migrate to Vue 3 (1 day)
+* Mastering Vue 3 (2 days)
+* Mastering Nuxt (1 day)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Local installation
+
+You need to restore the npm dependencies first:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Run the app on a local dev server
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Recommended IDE Setup
 
-```sh
-npm run build
-```
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+

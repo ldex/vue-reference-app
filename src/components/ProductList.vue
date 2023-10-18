@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import ProductDetails from '@/components/ProductDetails.vue';
 
 const props = defineProps({
@@ -92,6 +92,10 @@ const pageCount = computed(() => {
     let l = filteredProducts.value.length,
               s = props.pageSize;
             return Math.ceil(l / s);
+})
+
+watch([filterName, sortName, sortDir], () => {
+    pageNumber.value = 1;
 })
 </script>
 
