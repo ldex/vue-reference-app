@@ -10,7 +10,7 @@
         </fieldset>
         <ul class="products">
             <li v-for="product in sortedFilteredPaginatedProducts" v-bind:key="product.id"
-                v-bind:class='{ discontinued: product.discontinued, selected: product === selectedProduct }' @click="selectedProduct = product">
+                v-bind:class='{ discontinued: product.discontinued, selected: product === selectedProduct }' @click="onSelect(product)">
                 <span class="name">{{ product.name }}</span>
                 <span class="description">{{ product.description }}</span>
                 <span class="price">{{ product.price }}</span>
@@ -24,14 +24,12 @@
         <button @click="nextPage" :disabled="pageNumber >= pageCount">
             Next &gt;
         </button>
-
-        <product-details :product="selectedProduct"></product-details>
     </div>
 </template>
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import ProductDetails from '@/components/ProductDetails.vue';
+import { useRouter } from 'vue-router'
 
 const props = defineProps({
     products: Array,
@@ -41,12 +39,13 @@ const props = defineProps({
         default: 5
     }
 })
-const title = 'Products';
+let title = 'Products';
 const selectedProduct = ref(null);
 const filterName = ref('');
 const sortName = ref('modifiedDate');
 const sortDir = ref('desc');
 const pageNumber = ref(1);
+const router = useRouter()
 
 function nextPage() {
     pageNumber.value++;
@@ -60,10 +59,14 @@ function prevPage() {
 
 function sort(s) {
     //if s == current sort, reverse order
-    if (s === this.sortName) {
-        this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc';
+    if (s === sortName.value) {
+        sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc';
     }
-    this.sortName = s;
+    sortName.value = s;
+}
+
+function onSelect(product) {
+  router.push({ name: "product", params: { id: product.id } });
 }
 
 const filteredProducts = computed(() => {
@@ -102,6 +105,10 @@ watch([filterName, sortName, sortDir], () => {
 <style lang="css" scoped>
 .filters {
     padding: 10px
+}
+
+.filters button {
+    margin-right: 4px
 }
 
 .products {

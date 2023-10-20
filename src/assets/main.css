@@ -1,35 +1,68 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+.loader {
+  margin: 100px auto;
+  font-size: 25px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load5 1.1s infinite ease;
+  animation: load5 1.1s infinite ease;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@-webkit-keyframes load5 {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #4dba87, 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.5), -1.8em -1.8em 0 0em rgba(77,186,135, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.7), 1.8em -1.8em 0 0em #4dba87, 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.5), 1.8em -1.8em 0 0em rgba(77,186,135, 0.7), 2.5em 0em 0 0em #4dba87, 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.5), 2.5em 0em 0 0em rgba(77,186,135, 0.7), 1.75em 1.75em 0 0em #4dba87, 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.5), 1.75em 1.75em 0 0em rgba(77,186,135, 0.7), 0em 2.5em 0 0em #4dba87, -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.5), 0em 2.5em 0 0em rgba(77,186,135, 0.7), -1.8em 1.8em 0 0em #4dba87, -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.5), -1.8em 1.8em 0 0em rgba(77,186,135, 0.7), -2.6em 0em 0 0em #4dba87, -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.5), -2.6em 0em 0 0em rgba(77,186,135, 0.7), -1.8em -1.8em 0 0em #4dba87;
   }
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@keyframes load5 {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #4dba87, 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.5), -1.8em -1.8em 0 0em rgba(77,186,135, 0.7);
   }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.7), 1.8em -1.8em 0 0em #4dba87, 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.5), 1.8em -1.8em 0 0em rgba(77,186,135, 0.7), 2.5em 0em 0 0em #4dba87, 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.5), 2.5em 0em 0 0em rgba(77,186,135, 0.7), 1.75em 1.75em 0 0em #4dba87, 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.5), 1.75em 1.75em 0 0em rgba(77,186,135, 0.7), 0em 2.5em 0 0em #4dba87, -1.8em 1.8em 0 0em rgba(77,186,135, 0.2), -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.5), 0em 2.5em 0 0em rgba(77,186,135, 0.7), -1.8em 1.8em 0 0em #4dba87, -2.6em 0em 0 0em rgba(77,186,135, 0.2), -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.5), -1.8em 1.8em 0 0em rgba(77,186,135, 0.7), -2.6em 0em 0 0em #4dba87, -1.8em -1.8em 0 0em rgba(77,186,135, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(77,186,135, 0.2), 1.8em -1.8em 0 0em rgba(77,186,135, 0.2), 2.5em 0em 0 0em rgba(77,186,135, 0.2), 1.75em 1.75em 0 0em rgba(77,186,135, 0.2), 0em 2.5em 0 0em rgba(77,186,135, 0.2), -1.8em 1.8em 0 0em rgba(77,186,135, 0.5), -2.6em 0em 0 0em rgba(77,186,135, 0.7), -1.8em -1.8em 0 0em #4dba87;
   }
 }

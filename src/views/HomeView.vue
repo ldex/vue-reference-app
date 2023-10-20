@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main>
-
-  </main>
+  <div style="margin-bottom: 80px">
+    <h2>Welcome to our store!</h2>
+  </div>
 </template>
