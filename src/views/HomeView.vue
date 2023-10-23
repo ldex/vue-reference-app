@@ -1,8 +1,10 @@
 <script setup>
+import ModalButton from '@/components/ModalButton.vue';
 </script>
 
 <template>
-  <div style="margin-bottom: 80px">
+  <div class="home">
     <h2>Welcome to our store!</h2>
+    <modal-button button-text="Open Modal!"></modal-button>
   </div>
 </template>

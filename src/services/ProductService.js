@@ -1,5 +1,5 @@
-const baseURL = 'http://storerestservice.azurewebsites.net/api';
-const resourceName = 'products';
+const baseURL = import.meta.env.VITE_API_SERVER_URL
+const resourceName = 'products'
 
 export default {
 
