@@ -15,6 +15,27 @@ export const useProductStore = defineStore("product", {
   },
   actions: {
     fetchProducts() {
+
+      // const {
+      //   data,
+      //   error,
+      //   isFetching
+      // } = await ProductService.getProducts();
+
+      // this.products = data.value ?? [];
+      // this.errorMessage = !error.value ? null : 'There was an error getting products from server, ' + error.value; // if error.value not null we set a message
+      // this.isLoading = isFetching.value;
+
+      // this.isLoading = true;
+      // ProductService.getProducts()
+      //   .then((rep) => {
+      //     this.products = rep.data;
+      //   })
+      //   .catch(rep => {
+      //       this.errorMessage = 'There was an error getting products from server, ' + rep.error;
+      //   })
+      //   .finally(() => (this.isLoading = false))
+
       this.isLoading = true;
       ProductService.getProducts()
         .then((data) => {

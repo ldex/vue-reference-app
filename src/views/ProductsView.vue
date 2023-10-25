@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onErrorCaptured } from 'vue'
+import { computed, onErrorCaptured } from 'vue'
 import ProductList from '@/components/ProductList.vue'
 import { useProductStore } from '@/stores/product';
 
@@ -30,7 +30,7 @@ onErrorCaptured((error) => {
   return true;
 });
 
-productStore.fetchProducts()
+productStore.fetchProducts();
 </script>
 
 <style lang="scss" scoped></style>
