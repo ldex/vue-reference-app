@@ -13,24 +13,9 @@ export default function useList(
     sortDir: defaultSortDir,
     pageNumber: 1,
   });
-  watch(
-    () => state.filterName,
-    () => {
-      state.pageNumber = 1;
-    }
-  );
-  watch(
-    () => state.sortName,
-    () => {
-      state.pageNumber = 1;
-    }
-  );
-  watch(
-    () => state.sortDir,
-    () => {
-      state.pageNumber = 1;
-    }
-  );
+  watch([() => state.filterName, () => state.sortName, () => state.sortDir], () => {
+    state.pageNumber = 1;
+  })
   const sort = (s) => {
     //if s == current sort, reverse order
     if (s === state.sortName) {

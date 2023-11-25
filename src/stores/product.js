@@ -14,7 +14,7 @@ export const useProductStore = defineStore("product", {
     }
   },
   actions: {
-    fetchProducts() {
+    async fetchProducts() {
 
       // const {
       //   data,
