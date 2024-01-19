@@ -17,29 +17,13 @@ userStore.checkPreviousLogin();
       <router-link v-if="!userStore.isLoggedIn" to="/login">Login</router-link>
       <a v-else @click="userStore.logout()">Logout</a>
     </nav>
-    <!-- <router-view v-slot="{ Component }" :key="$route.fullPath">
-      <template v-if="Component">
-        <transition name="page" mode="out-in">
-            <suspense>
-              <template #default>
-                <component :is="Component"></component>
-              </template>
-              <template #fallback>
-                <div style="margin-top:20px">
-                  <h2 class="loading">Loading</h2>
-                </div>
-              </template>
-            </suspense>
-        </transition>
-      </template>
-    </router-view> -->
     <router-view v-slot="{ Component }">
       <transition name="page" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
     <hr />
-    <footer>Copyright Vue Academy 2023</footer>
+    <footer>Vue Academy 2024</footer>
   </div>
 </template>
 
