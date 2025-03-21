@@ -6,10 +6,7 @@ Vue Reference Application, a project from <a href="https://vue.ac" target="_blan
 
 Vue Academy is a world-class hands-on instructor-led Vue training provider.
 
-Visit www.vueacademy.ca for our list of Vue related courses:
-* Migrate to Vue 3 (1 day)
-* Mastering Vue 3 (2 days)
-* Mastering Nuxt (1 day)
+Visit www.vueacademy.ca for details on our Vue course.
 
 
 ## Local installation
